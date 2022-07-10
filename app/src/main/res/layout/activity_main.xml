@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/TW_users_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Users"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <ScrollView
+        android:id="@+id/Scrl"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toBottomOf="@id/TW_users_title">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_Users"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/TW_users_title"
+            />
+    </ScrollView>
+
+
+
+    <EditText
+        android:id="@+id/ET_enterFirstname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintDimensionRatio="7"
+        app:layout_constraintTop_toBottomOf="@id/Scrl"
+        app:layout_constraintBottom_toTopOf="@id/ET_enterLastname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="25dp"
+        android:hint="enter First Name"
+        />
+
+    <EditText
+        android:id="@+id/ET_enterLastname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintDimensionRatio="7"
+        app:layout_constraintBottom_toTopOf="@id/ET_enterEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/ET_enterFirstname"
+        android:hint="enter Last Name"
+        />
+
+    <EditText
+        android:id="@+id/ET_enterEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ET_enterLastname"
+        app:layout_constraintDimensionRatio="7"
+        app:layout_constraintBottom_toTopOf="@id/BTN_addbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="25dp"
+        android:hint="enter Email"
+        />
+
+    <Button
+        android:id="@+id/BTN_addbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="25dp"
+        android:text="add user"
+        app:layout_constraintTop_toBottomOf="@+id/ET_enterEmail"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
